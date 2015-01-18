@@ -1,0 +1,45 @@
+//@font-face {
+//  font-family: 'AvenirBla_IE';
+//  src: url("../fonts/AvenirLTStd/AveniBla.eot") format("opentype");
+//}
+
+//@font-face {
+//  font-family: 'AvenirBla';
+//  src: url("../fonts/AvenirLTStd/AvenirLTStd-Black.otf") format("opentype");
+//}
+
+//@font-face {
+//  font-family: 'AvenirMed_IE';
+//  src: url("../fonts/AvenirLTStd/AveniMed.eot") format("opentype");
+//}
+
+@font-face {
+  font-family: 'AvenirMed';
+  src: url("../fonts/AvenirLTStd/AvenirLTStd-Medium.otf") format("opentype");
+}
+
+.pager {
+  font-size: $small-font-size;
+
+  li a {
+    @extend .button;
+    @extend .tiny;
+  }
+}
+
+div.user-picture {
+  padding: 0;
+  margin-right: .3em;
+  float: left;
+  overflow: hidden;
+}
+
+
+// Bullets and numbering for wysiwyg
+.cke_editable,
+.body.field {
+  li {
+    margin-left: emCalc(30px);
+  }
+}
+

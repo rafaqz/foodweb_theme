@@ -1,0 +1,107 @@
+// Non-modular or client styles for the .l-content region.
+
+.l-main {}
+
+.main { 
+  padding-top: 1.5em;
+}
+
+////////////////////////////////////////////
+// Node
+////////////////////////////////////////////
+
+// Facebook style node layout with picture alone in left column.
+article.node {
+  @extend %divider-bottom;
+  
+  // Set minimum height to image height- its usually floated.
+  min-height : 60px;
+
+  .user-picture {
+    float: left;
+    margin-right: .5em;
+  }
+
+  .node-content {
+    overflow:hidden;
+    clear:none;
+  }
+}
+
+.node-teaser {
+  .body > p {
+    margin-bottom: 0;
+  }
+}
+
+.body {
+  margin-bottom: $vertical-spacer;
+}
+.image {}
+.breadcrumb {}
+
+////////////////////////////////////////////
+// Links
+////////////////////////////////////////////
+
+// Inline links: small, lower right.
+ul.links.inline {
+  float: right;
+  clear: both;
+  font-size: $small-font-size;
+  margin-bottom: emCalc(4);
+  li {
+    display: inline;
+    list-style-type: none;
+    margin-left: emCalc(15);
+
+    /*a {*/
+      /*@extend .button;*/
+    /*}*/
+  }
+}
+
+////////////////////////////////////////////
+// Comments
+////////////////////////////////////////////
+
+// Small, tight comment layout.
+.comment {
+  /*margin-bottom:1em;*/
+  .user-picture {
+    img {
+      width: $comment-pic-width;
+    }
+  }
+  .content {
+    clear: right;
+    overflow: hidden;
+  }
+}
+
+// Divider between content and comments.
+.comment-wrapper {
+  @extend %divider-top;
+}
+
+// Node and comment submitted/posted string.
+.posted, .submitted {
+  color: $subtle-font-color;
+  font-size: $small-font-size;
+  margin-bottom: $vertical-spacer;
+  span {
+    font-size: $small-font-size;
+  }
+  a.username {
+    border-right: 1px solid;
+    padding: 0 .3em;
+  }
+}
+
+// New comment label.
+.new {
+  @extend .label;
+  @extend .success;
+  @extend .small;
+}
+

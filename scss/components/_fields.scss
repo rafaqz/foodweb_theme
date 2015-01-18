@@ -1,0 +1,17 @@
+// Fields.
+
+.field {
+  margin-bottom: $vertical-spacer;
+}
+
+.field-name-tags {
+  font-size: $small-font-size;
+}
+        
+.field-type-taxonomy-term-reference,
+.field-type-entityreference {
+  a {
+    margin-right: emCalc(10);
+  }
+}
+        

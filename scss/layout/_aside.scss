@@ -1,0 +1,16 @@
+// Non-modular or client styles for asides or sidebars.
+
+.l-sidebar {}
+
+.sidebar {
+  margin-top: $vertical-spacer;
+  @extend %divider-left;
+
+  section.block {
+    @extend %divider-bottom;
+  }
+}
+.sidebar-first {
+}
+.sidebar-second {}
+

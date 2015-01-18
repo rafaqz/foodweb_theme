@@ -1,0 +1,130 @@
+// Non-modular or client styles for .l-header region.
+
+.l-header {}
+
+// Top Bar
+//--------------------------------------------------
+.top-bar {
+  text-transform:uppercase;
+  li.name h1 {
+    /*line-height: 2em;*/
+  }
+  /*overflow: none;*/
+}
+
+.top-bar-section {
+  .has-dropdown > a {
+     padding: 0 2em 0 1em !important;
+  }
+}
+.top-bar-section .left {
+}
+
+.top-bar-section .right {
+}
+
+.l-header-region {
+}
+
+.l-messages {
+  margin-top: $vertical-spacer;
+}
+
+section.l-featured {
+  padding-top: $vertical-spacer;
+}
+
+/*.title-region {*/
+  /*background: $success-color;*/
+  /*@extend %banner-padding;*/
+  /*.title {*/
+    /*@extend .column;*/
+    /*@extend .large-12;*/
+    /*color: $alt-font-color;*/
+  /*}*/
+/*}*/
+
+.title-wrapper {
+  @extend .columns;
+  @extend .large-7;
+  @extend .small-9;
+}
+
+.suffix-wrapper {
+  @extend .columns;
+  @extend .large-5;
+  @extend .small-3;
+}
+
+
+section.join-mail {
+  background: $success-color;
+  @extend %banner-padding-small;
+  .join-link-wrapper {
+    @extend .columns;
+    @extend .large-12;
+    @extend .small-12;
+  }
+  .join-label { 
+    font-size: $large-font-size;
+    color: $alt-font-color;
+    padding-top: emCalc(8);
+    padding-right: emCalc(8);
+    float: right;
+    clear:none;
+  }
+  .join-link {
+    @extend .button;
+    @extend .small;
+    @extend .radius;
+    float: right;
+    clear:none;
+    margin: 0;
+  }
+}
+
+section.join-mail.bottom {
+  background: #FCCA81;
+  span { 
+    color: $success-color;
+  }
+}
+
+.site-banner {
+  background: url(../images/banner-image.png) no-repeat;
+  background-color: $topbar-bg; 
+  background-size: 30%;
+  background-position: 3% 100%;
+  padding-top: emCalc(80);
+  padding-bottom: emCalc(20);
+  .site-logo {
+    @extend .columns; 
+    @extend .large-2; 
+    @extend .large-offset-4; 
+    @extend .small-3;
+    @extend .small-offset-4;
+  }
+  .site-banner-text {
+    @extend .columns; 
+    @extend .large-6; 
+    @extend .small-5;
+    a {
+      color: $alt-font-color;
+    }
+    .site-name { 
+      text-transform: uppercase;
+      font-size: $large-font-size;
+    }
+    .site-slogan {
+      color: $success-color;
+    }
+    .site-learn-more {
+      a {
+        @extend .button;
+        @extend .radius;
+        float: right;
+      }
+    }
+  }
+}
+

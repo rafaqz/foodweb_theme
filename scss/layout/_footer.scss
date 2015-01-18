@@ -1,0 +1,30 @@
+// Non-modular or client styles for .l-footer region.
+
+
+.l-footer {}
+.l-footer-columns {}
+
+.site-info-wrapper {
+  background: $success-color;
+  .site-info {
+    @extend .row;
+    color: $alt-font-color;
+    @extend %banner-padding-small;
+  }
+  a {
+    color: $alt-font-color;
+  }
+  .site-name {
+    @extend .columns;
+    @extend .large-3;
+    @extend .small-12;
+    margin-bottom: emCalc(10);
+  }
+  .copyright {
+    @extend .columns;
+    @extend .large-9;
+    @extend .small-12;
+    font-size: $small-font-size;
+  }
+}
+

@@ -1,0 +1,43 @@
+// Common abstract classes to extend or parametrics are stored here.
+
+// Example parametrics.
+// ------------------------------------------------------
+// %font-FONTNAME   {}
+// %font-sans-serif { font-family: sans-serif; }
+// %font-serif      { font-family: serif; }
+
+
+$divider: 1px solid #dddddd;
+$banner-padding: emCalc(30);
+$banner-padding-small: emCalc(10);
+
+%divider-left {
+  border-left: $divider; 
+}
+
+%divider-right {
+  border-right: $divider; 
+}
+
+%divider-top {
+  border-top: $divider;
+  margin-top: $vertical-spacer;
+  padding-top: $vertical-spacer;
+}
+
+%divider-bottom {
+  border-bottom: $divider;
+  padding-bottom: $vertical-spacer;
+  margin-bottom: $vertical-spacer;
+}
+
+%banner-padding {
+  padding-top: $banner-padding;
+  padding-bottom: $banner-padding-small;
+}
+
+%banner-padding-small {
+  padding-top: $banner-padding-small;
+  padding-bottom: $banner-padding-small;
+}
+

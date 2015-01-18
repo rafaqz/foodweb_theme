@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file
+ * Custom zurb install file.
+ */
+
+function custom_zurb_install() {
+  // Hide standard user menus, we have the "my acount" dropdown panel instead.
+  $num_updated = db_update('menu_links')
+    ->fields(array(
+      'hidden' => 1,
+    ))
+  ->condition('menu_name', 'user_menu', '=')
+  ->condition('link_title', array('Log out', 'User account'), 'IN')
+  ->execute();
+}

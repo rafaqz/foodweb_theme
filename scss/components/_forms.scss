@@ -1,0 +1,52 @@
+// Docs: http://foundation.zurb.com/docs/components/forms.html
+
+// Drupal specific classes
+// ----------------------------------------------------------------------------
+.form-text {}
+.form-submit {}
+
+#search-block-form {
+  .form-text {
+    height: emCalc(60px);
+  }
+  button {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    height: 32px;
+    width: 32px;
+    border: 0;
+    cursor: pointer;
+    zoom: 1;
+    filter: alpha(opacity=65);
+    opacity: 0.65;
+    background: transparent url('../images/search.png') top left no-repeat;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    :hover, :focus {
+      filter: alpha(opacity=90);
+      opacity: 0.9;  
+    }
+  }
+}
+
+form.comment-form {
+  .form-item {
+    @extend .user-picture;
+    img {
+      width: $comment-pic-width;
+    }
+    margin-top: 0;
+  }
+  .field-name-comment-body {
+    .form-type-textarea {
+      width: 100%;
+      label {
+        display: none;
+      }
+    }
+    overflow: hidden;
+  }
+}
+

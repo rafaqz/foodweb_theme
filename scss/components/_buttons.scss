@@ -1,0 +1,49 @@
+// Docs: http://foundation.zurb.com/docs/components/buttons.html
+//
+// Before adding styles be sure to modify variables in the
+// "scss/_variables.scss" file.
+
+.button {
+  @extend .radius;
+}
+
+button {
+  @extend .radius;
+}
+
+
+.add-content {
+  margin-bottom: emCalc(5);
+  @extend .button;
+  @extend .dropdown;
+}
+
+.add-content-links {
+  li {
+    list-style-type: none;
+  }
+  a {
+    @extend .small;
+    @extend .button;
+  }
+}
+ 
+.comment-form button {
+  @extend .small;
+}
+
+ul.button-group {
+  a.secondary {
+    background-color: lighten($secondary-color,7%);
+    color: lighten($body-font-color,30%);
+    border-color: #EEE;
+    @extend .tiny;
+  }
+  a.secondary.active {
+    background-color: lighten($secondary-color,4%);
+  }
+}
+
+.feed-icon {
+  margin-bottom: $vertical-spacer;
+}

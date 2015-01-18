@@ -1,0 +1,590 @@
+
+//////////////////////////////////////////////////////////////////
+// Share Feature.
+//////////////////////////////////////////////////////////////////
+
+.social-share { 
+  
+  width: 100px;
+
+  a {
+    padding-left: 30px;
+    width: 0px;
+    top: 0px;
+    height: 20px;                        /* be sure to set height & width */
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  a.social-share-facebook {
+    background: url(../images/facebook.png) no-repeat;
+    &:hover {
+      background: url(../images/facebook-hover.png) no-repeat;
+    }
+  }
+
+  a.social-share-googleplus {
+    background: url(../images/googleplus.png) no-repeat;
+    &:hover {
+      background: url(../images/googleplus-hover.png) no-repeat;
+    }
+  }
+
+  a.social-share-twitter {
+    background: url(../images/twitter.png) no-repeat;
+    &:hover {
+      background: url(../images/twitter-hover.png) no-repeat;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////
+// Groups Feature.
+//////////////////////////////////////////////////////////////////
+
+.view-group-users {
+  .views-row {
+     padding: 0 0 $vertical-spacer;
+     @extend .columns;
+     @extend .large-3;
+     @extend .small-2;
+  }
+  img {
+    margin-right: 1px;
+  }
+}
+
+.view-subgroups li {
+  list-style-type: none;
+}
+
+//////////////////////////////////////////////////////////////////
+// Message Feature.
+//////////////////////////////////////////////////////////////////
+
+.message {
+  font-size: $small-font-size;
+  margin-bottom: $vertical-spacer;
+  p {
+    margin: 0;
+  }
+  .user-picture {
+    padding: 0;
+    width: 40px;
+    margin-right: .3em;
+    float:left;
+  }
+  .message-details {
+    padding: 0;
+    overflow: hidden;
+  }
+  .timestamp {
+    color: $subtle-font-color;
+  }
+
+}
+
+// Buttons for follow flags.
+.flag-follow-node,.flag-follow-og,.flag-follow-term,.flag-follow-user,.flag-follow-document {
+  a.flag {
+    @extend .button;
+    @extend .small;
+  }
+  a.unflag-action {
+    /*@extend .success;*/
+  }
+  // Move message down to make space for button.
+  .flag-message {
+    top: 3em;
+  }
+}
+
+// Smaller follow buttons in views.
+.view {
+  .flag {
+    @extend .tiny;
+  }
+}
+
+.block-message-feature-followers {
+  margin-bottom: 1em;
+}
+
+.following-label {
+  font-size: $small-font-size;
+  color: $subtle-font-color;
+}
+
+.followers {
+  .user-picture {
+    display: inline;
+    clear: none;
+    float: none;
+    margin: 0;
+    img {
+      width: 40px;
+    }
+  }
+}
+
+.form-item-add-followers { 
+  @extend .columns;
+  @extend .large-8;
+  @extend .small-12;
+}
+
+.form-item-send-notifications {
+  @extend .columns;
+  @extend .large-4;
+  @extend .small-12;
+}
+
+.form-item-title {
+  clear: both;
+}
+
+.form-item-add-followers,.form-item-send-notifications {
+  label {
+    color: $subtle-font-color;
+  }
+}
+
+
+// Prevent floated links from being covered by contextual links region.
+.term-listing-heading {
+  min-height: 30px;
+}
+
+.view-recent-activity {
+  max-height: 300px;
+  overflow: auto;
+}
+
+//////////////////////////////////////////////////////////////////
+// Idea Feature.
+//////////////////////////////////////////////////////////////////
+
+article.node-idea {
+  .flag-outer.flag-outer-idea-vote {
+    float: right;
+    clear: none;
+  }
+}
+
+article.node-idea.node-teaser {
+  .node-title {
+    float: left;
+  }
+  .body {
+    clear: both;
+  }
+}
+
+.view-idea-votes {
+  @extend .panel;
+  ol {
+    margin-left: 2em;
+    margin-top: 1em;
+  }
+}
+
+//////////////////////////////////////////////////////////////////
+// Document Feature. 
+//////////////////////////////////////////////////////////////////
+
+.block-book-explorer {
+  .book-explorer {
+    a.active {
+      @extend .label;
+      /*@extend .success;*/
+    }
+  }
+}
+
+.book-navigation {
+  clear: both;
+
+  .page-links {
+    border: 0;
+
+  }
+
+  .page-previous, .page-next {
+    @extend .button;
+    @extend .secondary;
+    @extend .small;
+  }
+}
+
+//////////////////////////////////////////////////////////////////
+// Membership form feature.
+//////////////////////////////////////////////////////////////////
+
+#edit-field-mf-subscription-type .form-type-radio {
+  @extend .columns;
+  @extend .small-12;
+  @extend .large-6;
+}
+
+
+//////////////////////////////////////////////////////////////////
+// Tags feature.
+//////////////////////////////////////////////////////////////////
+
+span.flag-tag-filter {
+  a {
+    @extend .button;
+    @extend .tiny;
+    @extend .secondary;
+    margin-bottom: $vertical-spacer;
+  }
+  a.unflag-action {
+    @extend .success;
+    margin-bottom: $vertical-spacer;
+  }
+}
+
+.view-tag-filter {
+  .views-row {
+    width: auto;
+    float: left;
+  }
+}
+
+.node .field-name-field-tags {
+  font-size: $small-font-size;
+}
+
+//////////////////////////////////////////////////////////////////
+// Knowledge Feature.
+//////////////////////////////////////////////////////////////////
+
+// Form styling.
+form .field-name-field-ko-ref {
+  div.entityconnect-add {
+    height: auto;
+    padding: 5px 0;
+  }
+  button {
+    @extend .small;
+    @extend .secondary;
+  }
+  select,
+  div {
+    clear: both;
+    width: 100%;
+    /*margin: auto;*/
+  }
+  span {
+    display: block;
+  }
+  form .field-name-field-ko-file .tabledrag-toggle-weight-wrapper {
+    display: none;
+  }
+}
+
+// Display styling.
+.field-name-field-ko-file .file {
+  display: block;
+  margin-bottom: emCalc(12px);
+}
+
+//////////////////////////////////////////////////////////////////
+// Front Icons Feature
+//////////////////////////////////////////////////////////////////
+
+.view-front-icons {
+  margin-top: emCalc(30);
+  @extend %divider-bottom;
+
+  .view-content {
+    @extend .row;
+  }
+  .views-row {
+    text-align: center;
+    @extend .columns;
+    @extend .large-4;
+  }
+  .views-field-body {
+    height: 4.5em;
+  }
+  .views-field-title { 
+    margin: emCalc(35);
+    a {
+      color: $success-color;
+      text-transform: uppercase;
+    }
+  }
+  .views-field-field-fi-slogan { 
+    margin: emCalc(35);
+  }
+}
+
+//////////////////////////////////////////////////////////////////
+// Header Feature
+//////////////////////////////////////////////////////////////////
+
+.header-banner {
+  background-color: $header-bg;
+  color: $topbar-link-color;
+
+  a {
+    color: $topbar-link-color;
+  }
+}
+
+.header-details {
+  @extend %banner-padding;
+  @extend .row;
+  h1 {
+    display: inline;
+    color: $topbar-link-color;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+  
+  img {
+    margin-right: $horizontal-spacer;
+  }
+  .privacy-status {
+    @extend .label;
+    @extend .small;
+    @extend .radius;
+    /*font-size: $small-font-size;*/
+    background-color: $success-color; 
+    margin-left: $horizontal-spacer;
+    display: inline;
+  }
+
+  .field-name-group-group {
+
+    a {
+      @extend .button;
+      @extend .radius;
+    }
+  }
+
+  .member-count {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+
+.header-details-image {
+  @extend .columns;
+  @extend .large-2;
+  @extend .small-3;
+}
+
+.header-details-main {
+  @extend .columns;
+  @extend .large-7;
+  @extend .small-9;
+}
+
+.header-details-side {
+  @extend .columns;
+  @extend .large-3;
+  @extend .small-6;
+}
+
+.header-content-tab {
+  background-color: $header-bar-bg;
+  padding-top: emCalc(12);
+  .item-list {
+    @extend .row;
+
+    ul {
+      list-style: none;
+      padding-top: 10px;
+
+      li {
+        display: inline;
+        padding: emCalc(20);
+        a {
+          text-transform: uppercase;
+          padding: 8px 0 8px 40px;
+          color: $body-font-color;
+          font-weight: bold;
+        }
+      }
+      li.active {
+        border-radius: 8px;
+        background-color: $body-bg;
+      }
+      .home a,.profile a {
+        background: url(../images/home.png) no-repeat;
+      }
+      .conversations a {
+        background: url(../images/conversations.png) no-repeat;
+      }
+      .library a {
+        background: url(../images/library.png) no-repeat;
+      }
+      .ideas a {
+        background: url(../images/ideas.png) no-repeat;
+      }
+      .documentation a {
+        background: url(../images/documents.png) no-repeat;
+      }
+
+    }
+  }
+}
+
+$footer-banner-color: #78797C;
+.footer-banner {
+  @extend %banner-padding-small;
+  background-color: $header-bg;
+  color: $footer-banner-color;
+  a {
+    color: $footer-banner-color;
+  }
+  .footer-details {
+    @extend .row;
+    span {
+      @extend .columns;
+      @extend .large-6;
+    }
+  }
+}  
+
+//////////////////////////////////////////////////////////////////
+// Profile Feature
+//////////////////////////////////////////////////////////////////
+
+#profile-nav-wrapper {
+  .profile-nav {
+    border: $divider; 
+    text-transform: none;
+    a {
+      background: none;
+      color: $primary-color;
+      padding: 0;
+      margin-bottom: emCalc(3px);
+    }
+    li {
+      float: none;
+    }
+  }
+
+  .profile-nav-info {
+    padding: emCalc(14);
+    background-color: $body-bg;
+    min-width: emCalc(200);
+  }
+
+  .profile-nav-account {
+    margin-bottom: emCalc(10);
+    .user-picture {
+      margin-right: 10px;
+      a {
+        background-color: $body-bg;
+      }
+    }
+  }
+
+  .profile-nav-account-text {
+    overflow: hidden;
+  }
+
+  .profile-nav-roles {
+    font-size: $small-font-size;
+  }
+
+  .profile-nav-groups {
+    @extend .row; 
+    ul {
+      background: none;
+    }
+    li {
+      @extend .columns;
+      @extend .large-12;
+      @extend .small-6;
+      margin-top: emCalc(6);
+    }
+    display: block;
+    clear: both;
+  }
+
+  .profile-nav-actions {
+    background: $secondary-color;
+    border-top: $divider; 
+    position: relative;
+    height: emCalc(40);
+    a {
+      padding: emCalc(14);
+      font-weight: bold;
+      position:absolute;
+    }
+    a.profile-nav-logout {
+      right: 0px;
+    }
+  }
+}
+
+.block-menu-block {
+  @extend %banner-padding-small;
+  background: $main-stripe-bg;
+  li {
+    list-style:none;
+  }
+  ul {
+    margin: 0; 
+  }
+  // Font styling
+  a {
+    color: $body-bg;
+    font-size: $large-font-size;
+  }
+  // Columns for each 1st level menu item.
+  > div > ul {
+    @extend .row;
+
+    > li {
+      @extend .column;
+      @extend .large-3;
+      > a {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////
+// Idea feature.
+//////////////////////////////////////////////////////////////////
+
+.flag-idea-vote {
+  a {
+    @extend .button;
+    @extend .small;
+    @extend .success;
+    @extend .radius;
+  }
+  a.unflag-action {
+    @extend .secondary;
+  }
+}
+
+//////////////////////////////////////////////////////////////////
+// Featured feature.
+//////////////////////////////////////////////////////////////////
+
+.flag-featured.flag-edit {
+  @extend .button;
+  @extend .small;
+  @extend .secondary;
+}
+
+//////////////////////////////////////////////////////////////////
+// Image feature.
+//////////////////////////////////////////////////////////////////
+
+.node-teaser .image {
+  float: left;
+  margin: emCalc(5) emCalc(10) emCalc(5) 0;
+}
