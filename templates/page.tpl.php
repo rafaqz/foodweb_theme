@@ -21,9 +21,6 @@
             <?php if ($top_bar_secondary_menu) :?>
               <?php print $top_bar_secondary_menu; ?>
             <?php endif; ?>
-            <?php if ($top_bar_profile_nav) :?>
-              <?php print $top_bar_profile_nav; ?>
-            <?php endif; ?>
           </section>
         </nav>
       <?php if ($top_bar_classes): ?>
@@ -92,17 +89,6 @@
   </header>
   <!--/.l-header -->
 
-  <?php if ($is_front): ?>
-    <section class="join-mail top">
-      <div class="row">
-        <span class="join-link-wrapper">
-          <a class="join-link" href="<?php global $base_url; print $base_url; ?>/register">Register</a>
-          <span class="join-label">Join the mailing list</span>
-        </span>
-      </div>
-    </section>
-  <?php endif; ?>
-
   <?php if (!empty($page['featured'])): ?>
     <!--/.featured -->
     <section class="l-featured row">
@@ -145,22 +131,20 @@
 
       <?php /*if ($breadcrumb): print $breadcrumb; endif; */ ?>
       
-      <?php if ($show_title): ?>
-        <?php if ($title && !$is_front): ?>
-          <section class="title-region" >
-            <div class="row">
-              <div class='prefix-wrapper'>
-                <?php print render($title_prefix); ?>
-              </div>
-              <div class='title-wrapper'>
-                <h3 id="page-title" class="title"><?php print $title; ?></h3>
-              </div>
-              <div class='suffix-wrapper'>
-                <?php print render($title_suffix); ?>
-              </div>
+      <?php if ($title && !$is_front): ?>
+        <section class="title-region" >
+          <div class="row">
+            <div class='prefix-wrapper'>
+              <?php print render($title_prefix); ?>
             </div>
-          </section>
-        <?php endif; ?>
+            <div class='title-wrapper'>
+              <h3 id="page-title" class="title"><?php print $title; ?></h3>
+            </div>
+            <div class='suffix-wrapper'>
+              <?php print render($title_suffix); ?>
+            </div>
+          </div>
+        </section>
       <?php endif; ?>
 
       <div role="content" class="contextual-links-region">
@@ -265,17 +249,6 @@
       <?php endif; ?>
     </section>
     <!--/.footer-columns-->
-  <?php endif; ?>
-
-  <?php if (!$is_front): ?>
-    <section class="join-mail bottom">
-      <div class="row">
-        <span class="join-link-wrapper">
-          <a class="join-link" href="http://somehwere">Register</a>
-          <span class="join-label">Join the mailing list</span>
-        </span>
-      </div>
-    </section>
   <?php endif; ?>
 
   <!--.footer-->
